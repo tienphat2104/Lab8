@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        :root {
+            --viridian-green: hsl(180, 98%, 31%);
+            --white-1: hsl(0, 0%, 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            align-items: center;
+            background: var(--viridian-green);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .wrapper {
+            position: relative;
+            width: 400px;
+            height: 440px;
+            background: transparent;
+            border: 2px solid beige;
+            border-radius: 10px;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            transform: scale(0);
+            transition: transform .5s ease, height .2s ease;
+            margin-top: 20px;
+            margin-left: 20px;
+
+        }
+
+        .wrapper.active-popup {
+            transform: scale(1);
+        }
+
+        .wrapper.active {
+            height: 520px;
+        }
+
+        .wrapper .form-box {
+            width: 100%;
+            padding: 40px;
+        }
+
+        .form-box h2 {
+            font-size: 2em;
+            text-align: center;
+            color: white;
+            padding: 15px;
+        }
+
+        .input-box {
+            position: relative;
+            width: 100%;
+            height: 50px;
+            border-bottom: 1px solid white;
+            margin: 20px 0;
+        }
+
+        .input-box label {
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            transform: translateY(-50%);
+            font-size: 1em;
+            color: white;
+            font-weight: 500;
+            pointer-events: none;
+            transition: 0.5s;
+        }
+
+        .input-box input:focus~label,
+        .input-box input:valid~label {
+            top: -5px;
+        }
+
+        .input-box input {
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            font-size: 1em;
+            color: white;
+            font-weight: 300;
+            padding: 0 35px 0 5px;
+        }
+
+        .input-box .icon {
+            position: absolute;
+            right: 8px;
+            font-size: 1.2em;
+            color: white;
+            line-height: 57px;
+        }
+
+        .remember-forgot {
+            font-size: 0.9em;
+            color: white;
+            font-weight: 500;
+            margin: -15px 0 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .remember-forgot label input {
+            accent-color: white;
+            margin-right: 3px;
+        }
+
+        .remember-forgot a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .remember-forgot a:hover {
+            text-decoration: underline;
+            color: black;
+        }
+
+        .btn {
+            width: 100%;
+            height: 45px;
+            color: black;
+            background-color: white;
+            font-size: 16px;
+            border-radius: 15px;
+            outline: none;
+            border: none;
+            transition: 0.5s;
+            cursor: pointer;
+            font-weight: bold;
+            margin: 10px;
+
+        }
+
+        .btn:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .login-register {
+            text-align: center;
+            font-size: 0.9em;
+            color: white;
+            margin: 20px 0 10px;
+            font-weight: 500;
+        }
+
+        .login-register a {
+            text-decoration: none;
+            font-weight: 500;
+            color: white;
+        }
+
+        .login-register a:hover {
+            text-decoration: underline;
+            color: black;
+        }
+
+        .icon-close {
+            top: 0;
+            right: 0;
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            font-size: 2em;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.5s;
+            /* border-top-right-radius: 10px; */
+            border-bottom-left-radius: 10px;
+            cursor: pointer;
+            z-index: 1;
+
+        }
+
+        .icon-close:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .wrapper .form-box.login {
+            transition: transform .18s ease;
+            transform: translateX(0);
+        }
+
+        .wrapper.active .form-box.login {
+            transition: none;
+            transform: translateX(-400px);
+        }
+
+        .wrapper .form-box.register {
+            position: absolute;
+            transition: none;
+            transform: translateX(400px);
+        }
+
+        .wrapper.active .form-box.register {
+            transition: transform .18s ease;
+            transform: translateX(0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="wrapper active-popup active"> <!-- Thêm class "active" vào đây để hiển thị mặc định -->
+            <span class="icon-close">
+                <ion-icon name="close-outline"></ion-icon>
+            </span>
+            <div class="form-box login">
+                <h2>Login</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="mail-outline">
+                            </ion-icon>
+                        </span>
+                        <input type="email" required>
+                        <label for="#">Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="lock-closed-outline">
+                            </ion-icon>
+                        </span>
+                        <input type="password" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="remember-forgot">
+                        <label><input type="checkbox">
+                            Remember me</label>
+                        <a href="#">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                    <div class="login-register">
+                        <p>Don't have an account?</p>
+                        <!-- Xóa class "active" khỏi đây để ẩn liên kết đăng ký ban đầu -->
+                        <a href="#">
+                            <div class="register-link">Register</div>
+                        </a>
+                    </div>
+                </form>
+            </div>
+            <div class="form-box register">
+                <h2>Register</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="person-add-outline"></ion-icon>
+                            </ion-icon>
+                        </span>
+                        <input type="text" required>
+                        <label for="#">User Name</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="mail-outline">
+                            </ion-icon>
+                        </span>
+                        <input type="email" required>
+                        <label for="#">Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon">
+                            <ion-icon name="lock-closed-outline">
+                            </ion-icon>
+                        </span>
+                        <input type="password" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="remember-forgot">
+                        <label><input type="checkbox">
+                            I agree to the terms & conditions</label>
+                    </div>
+                    <button type="submit" class="btn">Register</button>
+                    <div class="login-register">
+                        <p>Already have an account?</p>
+                        <a href="#">
+                            <div class="login-link">Login</div>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const wrapper = document.querySelector('.wrapper');
+                const closeButton = document.querySelector('.icon-close');
+
+                closeButton.addEventListener('click', function () {
+                    wrapper.classList.remove('active-popup');
+                });
+
+                // Tính năng hiển thị form đăng nhập hoặc đăng ký khi trang được tải
+                const loginForm = document.querySelector('.form-box.login');
+                const registerForm = document.querySelector('.form-box.register');
+
+                // Xác định xem form nào sẽ hiển thị mặc định, ví dụ: đăng nhập
+                loginForm.style.transform = 'translateX(0)';
+                registerForm.style.transform = 'translateX(400px)';
+
+                const showLoginForm = () => {
+                    loginForm.style.transform = 'translateX(0)';
+                    registerForm.style.transform = 'translateX(400px)';
+                };
+
+                const showRegisterForm = () => {
+                    loginForm.style.transform = 'translateX(-400px)';
+                    registerForm.style.transform = 'translateX(0)';
+                };
+
+                // Đặt sự kiện click cho các liên kết đăng nhập và đăng ký
+                const loginLink = document.querySelector('.login-link');
+                const registerLink = document.querySelector('.register-link');
+
+                loginLink.addEventListener('click', showLoginForm);
+                registerLink.addEventListener('click', showRegisterForm);
+            });
+        </script>
+    </div>
+</body>
+
+</html>

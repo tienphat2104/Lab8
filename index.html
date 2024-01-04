@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Du lịch 3 miền</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Comforter+Brush&family=Heebo:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Header -->
+  <!-- <header class="header" data-header> -->
+
+  <header>
+    <h2 class="logo">Travel</h2>
+    <div class="menu">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="./Setting.html"> About us</a></li>
+        <li><a href="#Tours">Tours</a></li>
+        <li><a href="#booking">Booking</a></li>
+        <li><a href="#Contact">Contact</a></li>
+      </ul>
+    </div>
+    <button class="btn-login">
+      <a href="./login.html">Login</a>
+    </button>
+    <div class="action-btn">
+      <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+    <div class="dropdrow-menu">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="./Setting.html"> About us</a></li>
+        <li><a href="#Tours">Tours</a></li>
+        <li><a href="#booking"></a>Booking</li>
+        <li><a href="#Contact">Contact</a></li>
+        <li>
+          <button class="btn-login">
+            <a href="./login.html">Login</a>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <article>
+      <section class="section view" id="home">
+        <div class="container">
+          <div class="view-content">
+
+            <p class="section-subtitle">Explore Your Travel</p>
+            <h2 class="view-title">Trusted Travel Agency</h2>
+
+            <p class="view-text">
+              I travel not to go anywhere, but to go. I travel for travel's sake the great affair is to move.
+            </p>
+
+            <div class="btn-group">
+              <a href="#" class="btn btn-primary">Contact Us</a>
+
+              <a href="#" class="btn btn-outline">Learn More</a>
+            </div>
+          </div>
+
+          <figure class="view-banner">
+            <img src="img/img back.png" width="600" height="700" loading="lazy" alt="view banner" class="w-100">
+          </figure>
+        </div>
+
+      </section>
+
+      <!-- Img  -->
+      <section class="section destination" id="Tours">
+        <div class="destination-content">
+          <p class="section-subtitle">Destinations</p>
+          <h2 class="h2 section-title">Welcome to VietNam</h2>
+        </div>
+        <div class="container">
+          <div id="slide">
+            <div class="item" style="background-image: url('img/img ha noi.jpg');">
+              <div class="content-destination">
+                <div class="name">Hà Nội</div>
+                <div class="des">Là một trong những điểm tham quan, du lịch hấp dẫn bậc nhất, Hà Nội gây thương nhớ cho
+                  du khách bằng vẻ đẹp dịu dàng,
+                  quyến rũ nhưng không kém phần bí ẩn.</div>
+                <button>See more</button>
+              </div>
+            </div>
+            <div class="item" style="background-image: url('img/img tp hcm.jpg');">
+              <div class="content-destination">
+                <div class="name">Thành Phố HCM</div>
+                <div class="des">Thành phố Hồ Chí Minh (thường được gọi là Sài Gòn) là một thành phố ở miền nam Việt Nam
+                  nổi tiếng với vai trò nòng cốt trong chiến tranh Việt Nam. Sài Gòn cũng được biết đến với địa danh của
+                  thực dân Pháp, trong đó có Nhà thờ Đức Bà được xây dựng hoàn toàn bằng nguyên liệu nhập khẩu từ Pháp
+                  và
+                  Bưu điện trung tâm được xây dựng vào thế kỷ 19.</div>
+                <button>See more</button>
+              </div>
+            </div>
+            <div class="item" style="background-image: url('img/img da nang.jpg');">
+              <div class="content-destination">
+                <div class="name">Đà Nẵng</div>
+                <div class="des">Đà Nẵng thường được gọi bởi nhiều biệt danh trìu mến như thành phố bên sông Hàn, thành
+                  phố của những chiếc cầu,
+                  hay thành phố đáng sống nhất Việt Nam. Nơi đây gây thương nhớ không chỉ bởi nhịp sống yên bình, người
+                  dân thân thiện, đồ ăn ngon
+                  mà còn bởi những chốn vui chơi không kém phần thú vị.</div>
+                <button>See more</button>
+              </div>
+            </div>
+            <div class="item" style="background-image: url('img/img ha giang.jpg');">
+              <div class="content-destination">
+                <div class="name">Hà Giang</div>
+                <div class="des">Hà Giang từ lâu đã thu hút những tín đồ du lịch yêu thích khám phá thiên nhiên hùng vĩ.
+                  Không chỉ được biết đến là
+                  vùng đất địa đầu Tổ quốc, Hà Giang còn nổi tiếng tập trung nhiều địa danh lịch sử và những khu phố đậm
+                  nét văn hóa của các đồng bào dân tộc.</div>
+                <button>See more</button>
+              </div>
+            </div>
+            <div class="item" style="background-image: url('img/img ca mau.jpg');">
+              <div class="content-destination">
+                <div class="name">Cà Mau</div>
+                <div class="des">Mảnh đất cực Nam Tổ Quốc – Cà Mau sông nước là điểm đến thu hút khách du lịch bởi những
+                  con người chân chất,
+                  thật thà cùng cảnh sắc thiên nhiên miền sông nước trữ tình. Hãy đến Cà Mau một lần để thêm yêu vùng
+                  đất đặc biệt này và đừng quên khám phá 10 điểm du
+                  lịch không thể bỏ qua này nhé!</div>
+                <button>See more</button>
+              </div>
+            </div>
+          </div>
+          <div class="buttons">
+            <button id="prev"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+            <button id="next"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+          </div>
+        </div>
+      </section>
+      <!-- Cac dia danh khac -->
+
+      <section class="section place">
+        <div class="container">
+          <p class="section-subtitle">Place</p>
+
+          <h2 class="h2 section-title">Choose Your Place</h2>
+
+          <ul class="place-list">
+            <li class="w-50">
+              <a href="#" class="place-card">
+
+                <figure class="card-banner">
+                  <img src="img/NgheAn img.jpg" width="1140" height="1100" loading="lazy" alt="Nghệ An"
+                    class="img-cover">
+                </figure>
+
+                <div class="card-content">
+                  <p class="card-subtitle">Nghệ An</p>
+
+                  <h3 class="h3 card-title">Vùng đất học</h3>
+                </div>
+
+              </a>
+            </li>
+            <li class="w-50">
+              <a href="#" class="place-card">
+
+                <figure class="card-banner">
+                  <img src="img/QuangNgaiimg.jpg" width="1140" height="1100" loading="lazy" alt="Quảng Ngãi"
+                    class="img-cover">
+                </figure>
+
+                <div class="card-content">
+                  <p class="card-subtitle">Quảng Ngãi</p>
+
+                  <h3 class="h3 card-title">Vùng đất bề dày lịch sử</h3>
+                </div>
+
+              </a>
+            </li>
+            <li class="w-50">
+              <a href="#" class="place-card">
+
+                <figure class="card-banner">
+                  <img src="img/TraVinhimg.jpg" width="1140" height="1100" loading="lazy" alt="Trà Vinh"
+                    class="img-cover">
+                </figure>
+
+                <div class="card-content">
+                  <p class="card-subtitle">Trà Vinh</p>
+
+                  <h3 class="h3 card-title">Vùng đất châu thổ lâu đời</h3>
+                </div>
+
+              </a>
+            </li>
+            <li class="w-50">
+              <a href="#" class="place-card">
+
+                <figure class="card-banner">
+                  <img src="img/VinhHaLongimg.jpg" width="1140" height="1100" loading="lazy" alt="Vịnh Hạ Long"
+                    class="img-cover">
+                </figure>
+
+                <div class="card-content">
+                  <p class="card-subtitle">Vịnh Hạ Long</p>
+
+                  <h3 class="h3 card-title">Địa điểm du lịch tỉnh Quảng Ninh</h3>
+                </div>
+
+              </a>
+            </li>
+            <li class="w-50">
+              <a href="#" class="place-card">
+
+                <figure class="card-banner">
+                  <img src="img/VungTauimg.webp" width="1140" height="1100" loading="lazy" alt="Bà Rịa - Vũng Tàu"
+                    class="img-cover">
+                </figure>
+
+                <div class="card-content">
+                  <p class="card-subtitle">Bà Rịa - Vũng Tàu</p>
+
+                  <h3 class="h3 card-title">Vùng đất Chân Lạp tên gọi là Chân Bồ</h3>
+                </div>
+
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </section>
+    </article>
+  </main>
+
+  <!-- 
+        - #POPULAR
+      -->
+
+  <section class="section popular" id="booking">
+    <div class="container">
+
+      <p class="section-subtitle">Featured Tours</p>
+
+      <h2 class="h2 section-title">Most Popular Tours</h2>
+
+      <ul class="popular-list">
+
+        <li>
+          <div class="popular-card">
+
+            <figure class="card-banner">
+              <a href="#">
+                <img src="img/NuiBaDen.jpg" width="740" height="518" loading="lazy" alt="Núi Bà Đen - Tây Ninh"
+                  class="img-cover">
+              </a>
+
+              <span class="card-badge">
+                <ion-icon name="time-outline"></ion-icon>
+
+                <time datetime="P12D">12 Days</time>
+              </span>
+            </figure>
+
+            <div class="card-content">
+
+              <div class="card-wrapper">
+                <div class="card-price">From 1trVND</div>
+
+                <div class="card-rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+
+                  <data value="2">(1)</data>
+                </div>
+              </div>
+
+              <h3 class="card-title">
+                <a href="#">Núi Bà Đen là ngọn núi lửa đã tắt nằm ở trung tâm tỉnh Tây Ninh, Việt Nam.
+                  Với độ cao 986 m, đây là ngọn núi cao nhất miền Nam Việt Nam hiện nay, được mệnh danh
+                  "Đệ nhất thiên sơn".</a>
+              </h3>
+
+              <address class="card-location">Núi Bà Đen - Tây Ninh</address>
+              <button class="btn-pp">Booking</button>
+            </div>
+
+          </div>
+        </li>
+
+        <li>
+          <div class="popular-card">
+
+            <figure class="card-banner">
+              <a href="#">
+                <img src="img/PhuQuoc.jpg" width="740" height="518" loading="lazy" alt="Phú Quốc - Kiên Giang"
+                  class="img-cover">
+              </a>
+
+              <span class="card-badge">
+                <ion-icon name="time-outline"></ion-icon>
+
+                <time datetime="P12D">12 Days</time>
+              </span>
+            </figure>
+
+            <div class="card-content">
+
+              <div class="card-wrapper">
+                <div class="card-price">From 5trVND</div>
+
+                <div class="card-rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+
+                  <data value="2">(1)</data>
+                </div>
+              </div>
+
+              <h3 class="card-title">
+                <a href="#">Phú Quốc là một thành phố đảo trực thuộc tỉnh Kiên Giang, Việt Nam.
+                  Đảo Phú Quốc cùng các đảo nhỏ lân cận và quần đảo Thổ Chu hợp lại tạo thành Thành phố Phú Quốc ở vịnh
+                  Thái Lan,
+                  đây là thành phố đảo đầu tiên được thành lập của Việt Nam.</a>
+              </h3>
+
+              <address class="card-location">Phú Quốc - Kiên Giang</address>
+              <button class="btn-pp">Booking</button>
+            </div>
+
+          </div>
+        </li>
+
+        <li>
+          <div class="popular-card">
+
+            <figure class="card-banner">
+              <a href="#">
+                <img src="img/Sapa.png" width="740" height="518" loading="lazy" alt="Sapa - Lào Cai" class="img-cover">
+              </a>
+
+              <span class="card-badge">
+                <ion-icon name="time-outline"></ion-icon>
+
+                <time datetime="P12D">12 Days</time>
+              </span>
+            </figure>
+
+            <div class="card-content">
+
+              <div class="card-wrapper">
+                <div class="card-price">From 2trVND</div>
+
+                <div class="card-rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+
+                  <data value="2">(1)</data>
+                </div>
+              </div>
+
+              <h3 class="card-title">
+                <a href="#">Sa Pa là phường trung tâm của thị xã Sa Pa, tỉnh Lào Cai, Việt Nam.</a>
+              </h3>
+
+              <address class="card-location">Sapa - Lào Cai</address>
+              <button class="btn-pp">Booking</button>
+            </div>
+
+          </div>
+        </li>
+
+      </ul>
+
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+
+  <footer id="Contact" class="footer" style="background-image: url('img/footer-bg.png')">
+    <div class="container">
+
+      <div class="footer-top">
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Top destination</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Hà Nội</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Thành Phố HCM</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Đà Nẵng</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Hà Giang</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Cà Mau</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Categories</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Travel</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Lifestyle</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Fashion</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Education</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Food & Drink</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-list">
+
+          <li>
+            <p class="footer-list-title">Quick links</p>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">About</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Contact</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Tours</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Booking</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Terms & Conditions</a>
+          </li>
+
+        </ul>
+
+        <div class="footer-list">
+
+          <p class="footer-list-title">Get a newsletter</p>
+
+          <p class="newsletter-text">
+            For the latest deals and tips, travel no further than your inbox
+          </p>
+
+          <form action="" class="newsletter-form">
+            <input type="email" name="email" required placeholder="Email address" class="newsletter-input">
+
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <a href="#" class="logo">Travel</a>
+
+        <p class="copyright">
+          &copy; 2022 <a href="#" class="copyright-link">codewithsadee</a>. All Rights Reserved
+        </p>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="https://www.facebook.com/phat.ngo.370177" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-google"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+  </footer>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="./Lab7.js"></script>
+
+</html>
